@@ -115,7 +115,7 @@ server.port=8083
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/lecturas
 spring.datasource.username=root
-spring.datasource.password=1234
+spring.datasource.password=****
 ```
 
 ### Eureka
@@ -130,29 +130,13 @@ eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
 3. **Iniciar Gateway Service** en puerto 8087
 4. **Iniciar Patient Service** en puerto 8081
 5. **Iniciar Device Service** en puerto 8082
-6. **Ejecutar la aplicación:**
-   ```bash
-   mvn spring-boot:run
-   ```
+6. **Ejecutar la aplicación**
+   
 7. **Verificar:**
    - Directo: http://localhost:8083/api/readings
    - **Gateway**: http://localhost:8087/api/readings
 
-## 🧪 Testing
 
-```bash
-# Ejecutar tests
-mvn test
-
-# Con coverage
-mvn test jacoco:report
-```
-
-## 📊 Métricas y Monitoreo
-
-- **Health Check Directo:** http://localhost:8083/actuator/health
-- **Health Check Gateway:** http://localhost:8087/actuator/health
-- **Eureka Dashboard:** http://localhost:8761
 
 ## 🔗 Comunicación con Otros Servicios
 
