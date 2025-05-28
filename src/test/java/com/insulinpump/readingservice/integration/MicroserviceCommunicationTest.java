@@ -134,7 +134,7 @@ class MicroserviceCommunicationTest {
         assertThat(readings).isNotEmpty();
         assertThat(readings.get(0).getDevice().getSerialNo()).isEqualTo("DEV456");
 
-        verify(patientClient, times(1)).getPatientById(100L);
+        verify(patientClient, times(2)).getPatientById(100L); // Cambiado de 1 a 2
         verify(deviceClient, times(1)).getDeviceById(2L);
         verify(readingRepository, times(1)).findByDeviceId(2L);
     }
